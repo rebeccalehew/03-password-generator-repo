@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css"/>
   </head>
   <body>
     <div class="wrapper">
@@ -24,11 +24,18 @@
             aria-label="Generated Password"
           ></textarea>
         </div>
+       <!-- Allow user to choose password length and make selections for including numbers and/or symbols. User clicks Generate Password button to generate a password matching the selected criteria. -->
         <div class="card-footer">
+          <label for="length">Length</label>
+          <input type="number" id="length" value="10" min="8" max="128"/>    
+          <label for="numbers">Include Numbers</label>
+          <input type="checkbox" id="numbers" checked/>
+          <label for="special">Include Special Characters</label>
+          <input type="checkbox" id="special" checked/>
           <button id="generate" class="btn">Generate Password</button>
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
