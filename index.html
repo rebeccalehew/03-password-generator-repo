@@ -10,7 +10,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Password Generator</h1>
+        <h1>Random Password Generator</h1>
       </header>
       <div class="card">
         <div class="card-header">
@@ -27,7 +27,11 @@
        <!-- Allow user to choose password length and make selections for including numbers and/or symbols. User clicks Generate Password button to generate a password matching the selected criteria. -->
         <div class="card-footer">
           <label for="length">Length</label>
-          <input type="number" id="length" value="10" min="8" max="128"/>    
+          <input type="number" id="length" value="10" min="8" max="128"/>
+          <label for="letters">Include Uppercase</label>
+          <input type="checkbox" id="letters" checked/>
+          <label for="letters">Include Lowercase</label> 
+          <input type="checkbox" id="letters" checked/>   
           <label for="numbers">Include Numbers</label>
           <input type="checkbox" id="numbers" checked/>
           <label for="special">Include Special Characters</label>

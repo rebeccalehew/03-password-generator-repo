@@ -1,5 +1,6 @@
 // Define the characters that may be used in a strong password.
-const alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const alphaUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const alphaLower = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "0123456789";
 const special = "!@#$%^&*_-+=";
 
@@ -12,7 +13,7 @@ const generateBtn = document.querySelector("#generate");
 
 // Generates the password string with the allowable characters based on length specified and the options selected. Passes data to the generatePassword function.
 generateBtn.addEventListener("click", () => {
-  let characters = alpha;
+  let characters = alphaUpper + alphaLower;
   incNumbers.checked ? (characters += numbers) : "";
   incSpecial.checked ? (characters += special) : "";
   passwordTxt.value = generatePassword(length.value, characters);
